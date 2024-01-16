@@ -3,7 +3,7 @@
 </p>
 
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+This hands-on tutorial guides you through the seamless setup of an on-premises Active Directory within Azure Virtual Machines. Gain practical experience installing Active Directory on a Domain Controller VM and seamlessly joining a Client VM to the Domain. Dive into vital tasks like configuring Remote Desktop and effectively managing user accounts. Ensure proper resource management by confidently deleting the resource group and verifying its successful removal.
 
 <h2>Environments and Technologies Used</h2>
 
