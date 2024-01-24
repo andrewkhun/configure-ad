@@ -69,3 +69,29 @@ Once all settings have been applied click Review + Create, then Create once the 
 <p>
 <img src="https://imgur.com/g1vc41M.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 </p>
+</br>
+
+
+<h2>Step 2 - Ensure Connectivity Between the Client and Domain Controller</h2>
+<p>
+Retrieve the copy IP address for DC-1 from the Azure Portal. Open Remote Desktop Connection on your local machine and connect to DC-1 using the private IP address and credentials we previously created.
+
+Once inside DC-1, search for Windows Defender Firewall. Click on Advanced Settings. We must enable ICMP Echo requests to test the reachability between Client-1 and DC-1. Click on Inbound rules on the left side and within the main window filter by Protocol and enable the ICMP requests.
+</p>
+<p>
+<img src="https://imgur.com/klfuPbg.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<img src="https://imgur.com/BbXwfJ9.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<img src="https://imgur.com/An9YTjf.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Once ICMP requests have been enabled, head back to your local machine and connect to Client-1 through Remote Desktop Connection. Copy the Public IP address of Client-1 from the Azure Portal and login using the credentials created during Client-1's setup. 
+
+Once connected to Client-1, open up the Command Prompt and ping the private IP address of DC-1 and replies should be returned ensuring connectivity between the two virtual machies.
+</p>
+<p>
+<img src="https://imgur.com/vsZTSOj.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
