@@ -21,7 +21,7 @@ This hands-on tutorial guides you through the seamless setup of an on-premises A
 
 - Step 1 - Setup Resources in Azure
 - Step 2 - Ensure Connectivity Between the Client and Domain Controller
-- Step 3 - Install Active Directory
+- Step 3 - Install and Configure Active Directory
 - Step 4 - Create an Admin and Normal User Account in Active Directory
 - Step 5 - Join Client-1 to your Domain
 - Step 6 - Setup Remote Desktop for Non-Administrative Users on Client-1
@@ -100,10 +100,43 @@ Once inside DC-1, search for Windows Defender Firewall. Click on Advanced Settin
 <img src="https://imgur.com/An9YTjf.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Once ICMP requests have been enabled, head back to your local machine and connect to Client-1 through Remote Desktop Connection. Copy the Public IP address of Client-1 from the Azure Portal and login using the credentials created during Client-1's setup. 
+Once ICMP requests have been enabled, head back to your local machine and connect to Client-1 through Remote Desktop Connection. Copy the Public IP address of Client-1 from the Azure Portal and log in using the credentials created during Client-1's setup. 
 
 Once connected to Client-1, open up the Command Prompt and ping the private IP address of DC-1 and replies should be returned ensuring connectivity between the two virtual machies.
 </p>
 <p>
 <img src="https://imgur.com/vsZTSOj.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+
+
+
+
+
+
+<h2>Install and Configure Active Direcory</h2>
+<p>
+Go back into the DC-1 VM. In the Server Manager application, click Add Roles and Features (this is how we will install Active Directory). Click Next (3 times). Check the box next to Active Directory Domain Services, a pop-up screen may appear, just click Add Features. Click Next (3 times), then click Install, then close once it has finished installing.
+</p>
+<p>
+<img src="https://imgur.com/vaZgGWo.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<img src="https://imgur.com/karuhfT.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+To turn DC-1 into a Domain Controller, click on the flag with an exclamation symbol on the top right of the Service Manager application. Click on Promote this server to a domain controller, then click on Add a new forest.
+
+Enter a root domain name (i.e. mydomain.com), click Next, create a password, click Next until the Install option appears, then click Install. Once complete, the remote connection will disconnect due to DC-1 restarting (you will need to reconnect).
+</p>
+<p>
+<img src="https://imgur.com/4TSBTAi.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<img src="https://imgur.com/duGIpM6.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<img src="https://imgur.com/zYEFXal.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<img src="https://imgur.com/aa6gxkE.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 </p>
