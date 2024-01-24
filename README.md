@@ -52,6 +52,18 @@ Once all settings have been applied click Review + Create, then Create once the 
 <img src="https://imgur.com/vCawGQL.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
+Navigate to DC-1 in the Azure Portal and click on Networking and then Network Interface (aka NIC, which should say something like dc-1324). Click on IP configurations, click on ipconfig1, and change the private IP address settings, Allocation to Static. Static means the IP address is always going to be this and it is not going to change (regardless of if we turn the computer off and on).
+</p>
+<p>
+<img src="https://imgur.com/8QNwHCD.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<img src="https://imgur.com/xlZqVNV.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+
+
+
+<p>
 Next, create another virtual machine for Client-1. Ensure the VM is placed inside the same resource group and region. 
 
 For Image, select Windows 10 Pro, version 22H2. For Size, choose Standard_E2s_v3 - 2 vcpus, 16 GiB memory.
