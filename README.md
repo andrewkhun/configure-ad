@@ -140,3 +140,9 @@ Enter a root domain name (i.e. mydomain.com), click Next, create a password, cli
 <p>
 <img src="https://imgur.com/aa6gxkE.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 </p>
+<p>
+Open another window of the Remote Desktop Connection application on your local machine and log back into DC-1. You will notice that your credentials no longer work because DC-1 is a domain controller. To reconnect click on "Use a different account". For "Email address", enter the FQDN (aka Fully Qualified Domain Name; i.e. mydomain.com\labuser), then enter your password for labuser.
+</p>
+<p>
+<img src="https://imgur.com/I9TdcDc.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
