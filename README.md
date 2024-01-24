@@ -22,7 +22,7 @@ This hands-on tutorial guides you through the seamless setup of an on-premises A
 - Step 1 - Setup Resources in Azure
 - Step 2 - Ensure Connectivity Between the Client and Domain Controller
 - Step 3 - Install and Configure Active Directory
-- Step 4 - Create an Admin and Normal User Account in Active Directory
+- Step 4 - Create Admin and Normal User Accounts and Organizational Units in Active Directory
 - Step 5 - Join Client-1 to your Domain
 - Step 6 - Setup Remote Desktop for Non-Administrative Users on Client-1
 - Step 7 - Create Additional Users and Attempt to Log-In
@@ -144,5 +144,12 @@ Enter a root domain name (i.e. mydomain.com), click Next, create a password, cli
 Open another window of the Remote Desktop Connection application on your local machine and log back into DC-1. You will notice that your credentials no longer work because DC-1 is a domain controller. To reconnect click on "Use a different account". For "Email address", enter the FQDN (aka Fully Qualified Domain Name; i.e. mydomain.com\labuser), then enter your password for labuser.
 </p>
 <p>
-<img src="https://imgur.com/I9TdcDc.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/I9TdcDc.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
+</p>
+</br>
+
+
+<h2>Step 4 - Create Admin and Normal User Accounts in Active Directory</h2>
+<p>
+Now that we are logged back into DC-1, within the Server Manager, click on Tools, then click on Active Directory Users and Computers
 </p>
