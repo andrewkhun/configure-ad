@@ -59,7 +59,7 @@ Navigate to DC-1 in the Azure Portal and click on Networking and then Network In
 <img src="https://imgur.com/8QNwHCD.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-<img src="https://imgur.com/xlZqVNV.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/Iy4zPx7.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 </p>
 
 
@@ -106,7 +106,7 @@ Once inside DC-1, search for Windows Defender Firewall. Click on Advanced Settin
 <p>
 Once ICMP requests have been enabled, head back to your local machine and connect to Client-1 through Remote Desktop Connection. Copy the Public IP address of Client-1 from the Azure Portal and log in using the credentials created during Client-1's setup. 
 
-Once connected to Client-1, open up the Command Prompt and ping the private IP address of DC-1 and replies should be returned ensuring connectivity between the two virtual machies.
+Once connected to Client-1, open up the Command Prompt and ping the private IP address of DC-1 and replies should be returned ensuring connectivity between the two virtual machines.
 </p>
 <p>
 <img src="https://imgur.com/vsZTSOj.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
