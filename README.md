@@ -26,6 +26,7 @@ This hands-on tutorial guides you through the seamless setup of an on-premises A
 - Step 5 - Join Client-1 to your Domain
 - Step 6 - Setup Remote Desktop for Non-Administrative Users on Client-1
 - Step 7 - Create Additional Users and Attempt to Log-In
+- Step 8 - Delete Resource Groups or Continue to Next Lab
 
 <h2>Step 1 - Setup Resources in Azure</h2>
 
