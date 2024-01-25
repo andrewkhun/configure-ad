@@ -62,7 +62,6 @@ Navigate to DC-1 in the Azure Portal and click on Networking and then Network In
 </p>
 
 
-
 <p>
 Next, create another virtual machine for Client-1. Ensure the VM is placed inside the same resource group and region. 
 
@@ -82,6 +81,10 @@ Once all settings have been applied click Review + Create, then Create once the 
 <img src="https://imgur.com/g1vc41M.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 </p>
 </br>
+
+
+
+
 
 
 <h2>Step 2 - Ensure Connectivity Between the Client and Domain Controller</h2>
@@ -149,6 +152,10 @@ Open another window of the Remote Desktop Connection application on your local m
 </br>
 
 
+
+
+
+
 <h2>Step 4 - Create Admin and Normal User Accounts and Organizational Units in Active Directory</h2>
 <p>
 Now that you are logged back into DC-1, within the Server Manager, click on Tools, then click on Active Directory Users and Computers. Right-click on mydomain.com, go to New, then click Organizational Unit. Enter a name (i.e. _EMPLOYEES) and click OK. Create another Organizational Unit and name it (i.e. _ADMINS), then click OK. 
@@ -158,4 +165,25 @@ Now that you are logged back into DC-1, within the Server Manager, click on Tool
 </p>
 <p>
 <img src="https://imgur.com/RDO21Os.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Next, you will create a new admin and add them to the "Domain Admins" Security Group. Right-click on _ADMINS and create a new User. We will create a new user named "Jane Doe" with the username "jane_admin" and a password (i.e. Password1). When creating the user, you can uncheck "User must change password at next logon" and check the box for "Password never expires" for this lab.
+</p>
+<p>
+<img src="https://imgur.com/0XB18En.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<img src="https://imgur.com/CHZ1WhG.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Once Jane Doe has been created, right-click on her name and click on Properties. Type in Domain Admins to grant Jane admin privileges.
+</p>
+<p>
+<img src="https://imgur.com/7RegEJv.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Log out of DC-1, then log back in as jane doe. Re-open the Remote Desktop Connection application on your local machine and login with the new credentials we have just created for Jane Doe. Ensure you use the FQDN for your domain (i.e. Username: mydomain.com\jane_admin and Password: Password1).
+</p>
+<p>
+<img src="https://imgur.com/PzkZXNz.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
 </p>
