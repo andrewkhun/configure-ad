@@ -116,7 +116,7 @@ Once connected to Client-1, open up the Command Prompt and ping the private IP a
 
 
 
-<h2>Install and Configure Active Direcory</h2>
+<h2>Step 3 - Install and Configure Active Direcory</h2>
 <p>
 Go back into the DC-1 VM. In the Server Manager application, click Add Roles and Features (this is how we will install Active Directory). Click Next (3 times). Check the box next to Active Directory Domain Services, a pop-up screen may appear, just click Add Features. Click Next (3 times), then click Install, then close once it has finished installing.
 </p>
@@ -200,7 +200,7 @@ Access the Azure portal and go to DC-1, go to Networking, and take note of the P
 <img src="https://imgur.com/dQQ98NO.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Log back into Client-1 with the credentials made during the VM setup. Right-Click the Start Menu in the bottom left corner of the screen, click System, then click Rename this PC (advanced), then click Change...
+Log back into Client-1 with the credentials made during the VM setup. Right-click the Start Menu in the bottom left corner of the screen, click System, then click Rename this PC (advanced), then click Change...
 
 Select "Domain" type mydomain.com and Click OK, this will join Client-1 to DC-1's domain. A pop-up will appear asking for credentials, type in Jane Doe's credentials and Click OK (i.e. mydomain.com\jane.doe, Password1).
 </p>
@@ -218,4 +218,36 @@ Select "Domain" type mydomain.com and Click OK, this will join Client-1 to DC-1'
 </p>
 <p>
 Allow Client-1 to restart to finish joining the domain. When reconnecting to Client-1 through Remote Desktop Connection, we will now be able to log in using Jane Doe's admin credentials for mydomain.com.
+</p>
+
+
+
+
+
+<h2>Step 6 - Setup Remote Desktop for Non-Administrative Users on Client-1</h2>
+<p>
+Log back into Client-1 with jane doe's credentials. Right-click the Start menu and click System, then Remote Desktop. Click Select users that can remotely access this PC. Notice you can see who is currently allowed access to remote desktop into the computer. Click Add and type in "Domain Users", click Check Names, then OK. This will allow any users in the Domain Users security group remote desktop access to Client-1.
+</p>
+<p>
+<img src="https://imgur.com/tl46Wsn.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<img src="https://imgur.com/0gUwnes.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+
+
+
+<h2>Step 7 - Create Additional Users and Attempt to Log In </h2>
+<p>
+Next, we will use a script to add additional users to our domain. Head back into DC-1 log in as jane_admin and open Powershell ISE as administrator. 
+
+Copy this <a href="https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1">code</a> and paste it into Powershell ISE. This script will generate 10,000 new users and place them into the Domain Users security group.
+
+Once the code has been pasted, click on Run Script to begin adding users to the domain.
+</p>
+<p>
+<img src="https://imgur.com/MMAsAnB.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<img src="https://imgur.com/cDVYQUA.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 </p>
