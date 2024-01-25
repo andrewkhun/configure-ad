@@ -252,3 +252,16 @@ Once the code has been pasted, click on Run Script to begin adding users to the 
 <p>
 <img src="https://imgur.com/cDVYQUA.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 </p>
+<p>
+After the script has finished running you can view the results in the Server Manager under Active Directory's Users and Computers within the _EMPLOYEES OU. Each of the newly generated users has their password set to Password1. If you have not already, log out of Client-1 and select a user from the list of new users to log in.
+</p>
+<p>
+<img src="https://imgur.com/DGcsvEI.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Open up Remote Desktop Connection, input the new user's credentials and password (i.e. username: mydomain.com\bat.ciq password: Password1), and connect to Client-1 with your new user setup in Active Directory!
+</p>
+<p>
+<img src="https://imgur.com/ZLek2DM.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
+</p>
+
