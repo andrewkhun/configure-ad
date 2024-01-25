@@ -238,7 +238,7 @@ Log back into Client-1 with jane doe's credentials. Right-click the Start menu a
 
 
 
-<h2>Step 7 - Create Additional Users and Attempt to Log In </h2>
+<h2>Step 7 - Create Additional Users and Attempt to Log In</h2>
 <p>
 Next, we will use a script to add additional users to our domain. Head back into DC-1 log in as jane_admin and open Powershell ISE as administrator. 
 
@@ -263,5 +263,20 @@ Open up Remote Desktop Connection, input the new user's credentials and password
 </p>
 <p>
 <img src="https://imgur.com/ZLek2DM.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
+</p>
+
+
+
+
+
+<h2>Step 8 - Delete Resource Groups or Continue to Next Lab</h2>
+<p>
+Now that you have completed the lab, you can either navigate to the Azure Portal and delete the Resource Groups to prevent any incurring costs or you can continue to the next lab, which will use the Active Directory we have set up. 
+
+If you would like to delete the resource groups, navigate to the Azure Portal and click Resource Groups. Click on each Resource Group, then click on Delete Resource Group. Copy and paste the name of the resource group to confirm deletion. Then confirm each group has been deleted.
+
+If you would like to continue to the next lab click on an option below:
+  - [Understanding and Building Intuition for DNS](https://github.com/andrewkhun/dns)
+  - [Network File Shares and Permissions](https://github.com/andrewkhun/network-fileshare)
 </p>
 
