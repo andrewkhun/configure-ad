@@ -182,8 +182,40 @@ Once Jane Doe has been created, right-click on her name and click on Properties.
 <img src="https://imgur.com/7RegEJv.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Log out of DC-1, then log back in as jane doe. Re-open the Remote Desktop Connection application on your local machine and login with the new credentials we have just created for Jane Doe. Ensure you use the FQDN for your domain (i.e. Username: mydomain.com\jane_admin and Password: Password1).
+Log out of DC-1, then log back in as jane doe. Re-open the Remote Desktop Connection application on your local machine and log in with the new credentials we have just created for Jane Doe. Ensure you use the FQDN for your domain (i.e. Username: mydomain.com\jane_admin and Password: Password1).
 </p>
 <p>
 <img src="https://imgur.com/PzkZXNz.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
+</p>
+
+
+
+<h2>Step 5 - Join Client-1 to your Domain</h2>
+<p>
+Earlier, the Virtual Network (Vnet) created a "hidden" DNS server that Client-1 is currently using. To join Client-1 to our domain (mydomain.com), Client-1 needs to use DC-1 as its DNS server. This is because DC-1 knows what our domain is. If we allow Client-1 to maintain its current DNS server, it will not be able to join the domain.
+
+Access the Azure portal and go to DC-1, go to Networking, and take note of the Private IP Address. Access Client-1's Network Interface and click on DNS servers. Set the DNS server to custom enter DC-1's private IP address and save. Go to Client-1 in the Azure Portal and restart the VM.
+</p>
+<p>
+<img src="https://imgur.com/dQQ98NO.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Log back into Client-1 with the credentials made during the VM setup. Right-Click the Start Menu in the bottom left corner of the screen, click System, then click Rename this PC (advanced), then click Change...
+
+Select "Domain" type mydomain.com and Click OK, this will join Client-1 to DC-1's domain. A pop-up will appear asking for credentials, type in Jane Doe's credentials and Click OK (i.e. mydomain.com\jane.doe, Password1).
+</p>
+<p>
+<img src="https://imgur.com/737qkBu.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<img src="https://imgur.com/6YDAXg1.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<img src="https://imgur.com/Hol4sVt.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<img src="https://imgur.com/Dwu2EQ8.png" height="30%" width="30%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Allow Client-1 to restart to finish joining the domain. When reconnecting to Client-1 through Remote Desktop Connection, we will now be able to log in using Jane Doe's admin credentials for mydomain.com.
 </p>
