@@ -149,7 +149,13 @@ Open another window of the Remote Desktop Connection application on your local m
 </br>
 
 
-<h2>Step 4 - Create Admin and Normal User Accounts in Active Directory</h2>
+<h2>Step 4 - Create Admin and Normal User Accounts and Organizational Units in Active Directory</h2>
 <p>
-Now that we are logged back into DC-1, within the Server Manager, click on Tools, then click on Active Directory Users and Computers
+Now that you are logged back into DC-1, within the Server Manager, click on Tools, then click on Active Directory Users and Computers. Right-click on mydomain.com, go to New, then click Organizational Unit. Enter a name (i.e. _EMPLOYEES) and click OK. Create another Organizational Unit and name it (i.e. _ADMINS), then click OK. 
+</p>
+<p>
+<img src="https://imgur.com/RvJNjzt.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<img src="https://imgur.com/RDO21Os.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 </p>
