@@ -276,7 +276,7 @@ Now that you have completed the lab, you can either navigate to the Azure Portal
 If you would like to delete the resource groups, navigate to the Azure Portal and click Resource Groups. Click on each Resource Group, then click on Delete Resource Group. Copy and paste the name of the resource group to confirm deletion. Then confirm each group has been deleted.
 
 If you would like to continue to the next lab click on an option below:
-  - [Understanding and Building Intuition for DNS](https://github.com/andrewkhun/dns)
+  - [Understanding and Building Intuition for DNS](https://github.com/andrewkhun/understanding-dns)
   - [Network File Shares and Permissions](https://github.com/andrewkhun/network-fileshare)
 </p>
 
